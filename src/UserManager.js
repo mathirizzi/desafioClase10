@@ -10,6 +10,11 @@ class UserManager {
        
     }
 
+    //--------------------Para filtrar usuarios--------------------//
+
+    async getUserBy(filter) {
+      return await userModel.findOne(filter)
+  }
 
   //--------------------Para ver un usuario por su ID--------------------//
 

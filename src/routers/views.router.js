@@ -21,7 +21,18 @@ router.get('/realtimeproducts',async (req,res)=>{
 
 //------------------------------------------//
 
+router.get('/login', (req,res)=>{
+    res.status(200).render('login')
+})
 
+router.get('/register', (req,res)=>{
+    res.status(200).render('register')
+})
+
+
+//------------------------------------------//
+
+/*
 router.get('/', async (req,res)=>{
     try{
       const productList = await products.getProducts()
@@ -31,6 +42,8 @@ router.get('/', async (req,res)=>{
     res.status(500).send('Error de servidor')
 }
 
+})
+*/
 //------------------------------------------//
 
 router.get('/products', async (req,res)=>{
@@ -53,6 +66,6 @@ router.get('/products', async (req,res)=>{
     })
 })
 
-})
+
 
 export default router;
